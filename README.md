@@ -14,25 +14,7 @@ r = requests.get(url)
 soup = bs(r.content, 'html.parser')
 profile_image = soup.find('img', {'alt': 'Avatar'})['src']
 print(profile_image)
-    '''
-    The shuffle method shuffles the cards.
-    '''
-
-
-    def deal(self, no_of_cards):
-        dealt_cards = []
-        for i in range(no_of_cards):
-            dealt_card = self._cards.pop(0)
-            dealt_cards.append(dealt_card)
-        return dealt_cards
-'''Deals the cards.'''
-    def __repr__(self):
-        cards_in_deck = len(self._cards)
-        return "Deck of " + str(cards_in_deck) + " cards"
-        
-deck = Deck()
-print(deck)
-```
+    
 
 Output
 ```
